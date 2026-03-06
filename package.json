@@ -8,7 +8,10 @@
     "start": "next start -H 0.0.0.0 -p 3000",
     "lint": "next lint",
     "sync:data": "powershell -ExecutionPolicy Bypass -File ./scripts/sync-openclaw-data.ps1",
-    "serve:static": "npx serve -l 3001"
+    "serve:static": "npx serve -l 3001",
+    "mc:start": "powershell -ExecutionPolicy Bypass -File ./scripts/start-mission-control-remote.ps1",
+    "mc:refresh": "powershell -ExecutionPolicy Bypass -File ./scripts/refresh-mission-control-data.ps1",
+    "mc:stop": "powershell -ExecutionPolicy Bypass -File ./scripts/stop-mission-control-remote.ps1"
   },
   "dependencies": {
     "next": "^16.1.6",
