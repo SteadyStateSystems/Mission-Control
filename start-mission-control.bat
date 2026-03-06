@@ -19,6 +19,6 @@ echo [Mission Control] Press Ctrl+C to stop.
 call npm run dev
 
 if errorlevel 1 (
-  echo [Mission Control] Server exited with an error.
+  echo [Mission Control] Server exited with an error. If port 3000 is already in use, close old Mission Control windows first.
   pause
 )
