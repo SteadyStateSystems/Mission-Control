@@ -1,0 +1,58 @@
+﻿{
+    "updatedAt":  "2026-03-05T23:25:59.7329572-05:00",
+    "kpis":  {
+                 "openTasks":  4,
+                 "scheduledJobs":  0,
+                 "activeJobs":  1,
+                 "agentsOnline":  1
+             },
+    "openTasks":  [
+                      {
+                          "name":  "agent:main:main",
+                          "status":  "running",
+                          "detail":  "agent=main, updated=7.1 min ago"
+                      },
+                      {
+                          "name":  "agent:discord-support:discord:channel:1477870691905962004",
+                          "status":  "historic",
+                          "detail":  "agent=discord-support, updated=5811.3 min ago"
+                      },
+                      {
+                          "name":  "agent:discord-support:discord:channel:970484199763112009",
+                          "status":  "historic",
+                          "detail":  "agent=discord-support, updated=5840.5 min ago"
+                      },
+                      {
+                          "name":  "agent:main:discord:direct:667191314571460633",
+                          "status":  "historic",
+                          "detail":  "agent=main, updated=5999 min ago"
+                      }
+                  ],
+    "scheduledJobs":  [
+
+                      ],
+    "activeJobs":  [
+                       {
+                           "name":  "agent:main:main",
+                           "detail":  "agent=main"
+                       }
+                   ],
+    "agents":  [
+                   {
+                       "id":  "main",
+                       "name":  "Jarvis Main",
+                       "online":  true,
+                       "lastSeen":  "6.9 min ago"
+                   },
+                   {
+                       "id":  "discord-support",
+                       "name":  "Discord Support",
+                       "online":  false,
+                       "lastSeen":  "5811.2 min ago"
+                   }
+               ],
+    "memories":  {
+                     "title":  "2026-03-05.md",
+                     "snippet":  "# 2026-03-05  ## Durable preferences established "
+                 }
+}

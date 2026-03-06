@@ -1,44 +1,44 @@
-# Jarvis Mission Control
+# Jarvis Mission Control (GitHub Pages style)
 
-Read-only Next.js Mission Control dashboard inspired by the referenced YouTube flow.
+Mission Control customized for your stack:
+- Primary agent: **Jarvis**
+- Sub-bot: **Pip**
+- KPI cards are clickable detail links
+- Calendar/Tasks/Active Jobs/Agents/Memories are real pages
+- Data source: **OpenClaw runtime only** (not M3T)
 
-## What this includes
+## How data works
 
-- Mission-control style shell + dark UI
-- Task Board (kanban columns)
-- KPI strip
-- Live activity feed
-- Helpful modules section (Task Board, Calendar, Projects, Memories, Docs, Team, Office)
-- Mobile-responsive layout
-- Read-only page (no form input, no actions posted back to the agent)
+This repo uses a static web UI (GitHub Pages friendly) plus a local sync script.
 
-## Self-host on this machine (no public deploy)
+- UI files: `index.html`, `calendar.html`, `tasks.html`, `jobs.html`, `agents.html`, `memories.html`
+- Runtime data file: `data/runtime.json`
+- Sync script: `scripts/sync-openclaw-data.ps1`
 
-### One-click startup (Windows)
+Run sync before viewing to refresh live runtime data:
 
-Double-click:
-
-- `start-mission-control.bat`
-
-It will:
-
-1. install dependencies if missing
-2. start Mission Control on `http://localhost:3000`
-3. print a same-Wi-Fi phone link like `http://192.168.x.x:3000`
-
-### Manual run
-
-```bash
-npm install
-npm run dev
+```powershell
+npm run sync:data
 ```
 
-Then open:
+## Local view
 
-- this PC: `http://localhost:3000`
-- phone on same Wi-Fi: `http://<your-pc-ip>:3000`
+```powershell
+npm run serve:static
+```
 
-## Notes
+Open:
+- `http://localhost:3001/index.html`
 
-- This is self-hosted/private unless you intentionally expose your network port to the internet.
-- Dashboard is read-only by design.
+## GitHub Pages view
+
+Once pushed, open your repo Pages URL. The UI loads from GitHub directly.
+
+> Note: runtime data freshness depends on how often you run `sync:data` and push updates.
+
+## KPI semantics
+
+- **Open Tasks**: all known OpenClaw sessions/items
+- **Scheduled Jobs**: OpenClaw cron jobs
+- **Active Jobs**: only sessions updated in the live window (processing now)
+- **Agents Online**: agents active recently

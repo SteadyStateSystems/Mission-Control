@@ -6,7 +6,9 @@
     "dev": "next dev -H 0.0.0.0 -p 3000",
     "build": "next build",
     "start": "next start -H 0.0.0.0 -p 3000",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sync:data": "powershell -ExecutionPolicy Bypass -File ./scripts/sync-openclaw-data.ps1",
+    "serve:static": "npx serve -l 3001"
   },
   "dependencies": {
     "next": "^16.1.6",

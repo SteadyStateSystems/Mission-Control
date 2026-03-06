@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jarvis Mission Control</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <h1>Jarvis Mission Control</h1>
+      <p class="muted">Primary: Jarvis • Sub-bot: Pip</p>
+      <nav>
+        <a class="active" href="index.html">Overview</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="tasks.html">Task Board</a>
+        <a href="jobs.html">Active Jobs</a>
+        <a href="agents.html">Agents</a>
+        <a href="memories.html">Memories</a>
+      </nav>
+    </aside>
+    <main class="content">
+      <header>
+        <h2>Overview</h2>
+        <div id="updatedAt" class="muted"></div>
+      </header>
+      <section class="kpi-grid">
+        <a class="kpi" href="tasks.html"><h3>Open Tasks</h3><p id="kOpen">0</p></a>
+        <a class="kpi" href="calendar.html"><h3>Scheduled Jobs</h3><p id="kSched">0</p></a>
+        <a class="kpi" href="jobs.html"><h3>Active Jobs</h3><p id="kActive">0</p></a>
+        <a class="kpi" href="agents.html"><h3>Agents Online</h3><p id="kAgents">0</p></a>
+      </section>
+      <section class="card">
+        <h3>Currently Processing</h3>
+        <ul id="processing"></ul>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
